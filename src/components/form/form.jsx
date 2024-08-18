@@ -1,39 +1,39 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './form.css';
 import {useTelegram} from "../../hooks/useTelegram";
 
 const Form = () => {
-    const [coutry, setCountry] = useState('');
+    const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
     const [street, setStreet] = useState('');
     const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
 
     useEffect(() => {
-        th.MainButton.setParams({
+        tg.MainButton.setParams({
             text: 'Отправить данные'
         })
     }, []);
 
     useEffect(() => {
-        if(!street || !coutry) {
+        if(!street || !country) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
         }
-    }, [coutry, street ]);
+    }, [country, street ]);
 
     const onChangeCountry = () => {
-        setCountry(e.target.valuee)
+        setCountry(e.target.value)
     }
     const onChangeCity = () => {
-        setCity(e.target.valuee)
+        setCity(e.target.value)
     }
     const onChangeStreet = () => {
-        setStreet(e.target.valuee)
+        setStreet(e.target.value)
     }
     const onChangeSubject = () => {
-        setSubject(e.target.valuee)
+        setSubject(e.target.value)
     }
 
     return (
@@ -43,7 +43,7 @@ const Form = () => {
                 className={'input'}
                 type="text"
                 placeholder={'Страна'}
-                value={coutry}
+                value={country}
                 onChange={onChangeCountry}
             />
             <input
