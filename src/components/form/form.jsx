@@ -24,7 +24,7 @@ const Form = () => {
     }, [coutry, street ]);
 
     const onChangeCountry = () => {
-        setCoutry(e.target.valuee)
+        setCountry(e.target.valuee)
     }
     const onChangeCity = () => {
         setCity(e.target.valuee)
