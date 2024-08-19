@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
 import header from "./components/header/header"
 import {Route, Routes} from 'react-router-dom'
-import Productlist from "./components/productlist/productlist";
+import productlist from "./components/productlist/productlist";
 import Form from "./components/form/form"
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <div className="App">
             <header />
             <Routes>
-                <Route index element={<Productlist/>}/>
+                <Route index element={<productlist/>}/>
                 <Route path={'form'} element={<Form />}/>
                 {/*<Route path={'productlist'} element={<Produdctlist />}/>*/}
             </Routes>

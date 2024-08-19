@@ -1,5 +1,4 @@
 import React from 'react';
-// import productlist from "../productlist/productlist";
 import button from "../button/button";
 import './productitem.css';
 
