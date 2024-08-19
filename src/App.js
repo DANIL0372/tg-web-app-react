@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
 import header from "./components/header/header"
 import {Route, Routes} from 'react-router-dom'
-import Produdctlist from "./components/productlist/produdctlist";
+import Produdctlist from "./components/productlist/productlist";
 import Form from "./components/form/form"
 
 function App() {
