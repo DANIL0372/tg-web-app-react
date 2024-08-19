@@ -19,7 +19,7 @@ const getTotalPrice = (items = []) => {
     }, 0)
 }
 
-const Productlist = () => {
+const productlist = () => {
     const [addedItems, setAddedItems] = useState([]);
     const {tg} = useTelegram();
     const onAdd = (product) => {
@@ -57,4 +57,4 @@ const Productlist = () => {
     );
 };
 
-export default Productlist;
+export default productlist;

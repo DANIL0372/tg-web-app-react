@@ -2,7 +2,7 @@ import React from 'react';
 import button from "../button/button";
 import './productitem.css';
 
-const Productitem = ({product, className, onAdd}) => {
+const productitem = ({product, className, onAdd}) => {
     const onAddHandler = () => {
         onAdd(product);
     }
@@ -22,4 +22,4 @@ const Productitem = ({product, className, onAdd}) => {
     );
 };
 
-export default Productitem;
+export default productitem;
