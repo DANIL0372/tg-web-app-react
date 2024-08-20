@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './productlist.css';
-import productitem from "../productitem/productitem"
-import {useTelegram} from "../../hooks/useTelegram"
+import productitem from "../productitem/productitem";
+import {useTelegram} from "../../hooks/useTelegram";
 
-const product = [
+const products = [
     {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
     {id: '2', title: 'Nike', price: 8000, description: 'Самое пиздатое, что могли придумать в этом мире'},
     {id: '3', title: 'Adidas', price: 2000, description: 'Нормальный конкурент'},
@@ -15,7 +15,7 @@ const product = [
 ]
 const getTotalPrice = (items = []) => {
     return items.reduce((acc, item) => {
-        return acc + item.price
+        return acc += item.price
     }, 0)
 }
 
@@ -24,7 +24,7 @@ const productlist = () => {
     const {tg} = useTelegram();
     const onAdd = (product) => {
         const alreadyAdded = addedItems.find(item => item.id === product.id);
-        let newItems;
+        let newItems = [];
 
         if(alreadyAdded) {
             newItems = addedItems.filter(item => item.id !== product.id);
@@ -46,7 +46,7 @@ const productlist = () => {
 
     return (
         <div className={'list'}>
-            {product.map(item => (
+            {products.map(item => (
                 <productitem
                     product={item}
                     onAdd={onAdd}
