@@ -4,7 +4,7 @@ import {useTelegram} from "./hooks/useTelegram";
 import header from "./components/header/header"
 import {Route, Routes} from 'react-router-dom'
 import productlist from "./components/productlist/productlist";
-import Form from "./components/form/form"
+import form from "./components/form/form"
 
 function App() {
     const {tg} = useTelegram();
@@ -17,8 +17,8 @@ function App() {
         <div className="App">
             <header />
             <Routes>
-                <Route index element={<productlist/>}/>
-                <Route path={'form'} element={<Form />}/>
+                <Route index element={<productlist />}/>
+                <Route path={'form'} element={<form />}/>
                 {/*<Route path={'productlist'} element={<Produdctlist />}/>*/}
             </Routes>
         </div>
